@@ -14,13 +14,17 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
+import org.junit.experimental.categories.Categories;
+import org.junit.experimental.categories.Category;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
+import ppss.categorias.ConParametros;
 
 /**
  *
  * @author ppss
  */
+
 @RunWith(Parameterized.class)
 public class TestMatriculaConParametros {
     
@@ -63,6 +67,7 @@ public class TestMatriculaConParametros {
         this.resultadoEsperado = resultadoEsperado; 
     }
     
+    @Category(ConParametros.class)
     @Test
     public void testCalculaTasa() {
         assertEquals(resultadoEsperado, mat.calculaTasaMatricula(edad, familiaNumerosa, repetidor), 0.00f);

@@ -23,4 +23,55 @@
                 <goal>test</goal>
             </goals>
         </action>
+        <action>
+            <actionName>CUSTOM-test con parametros</actionName>
+            <displayName>test con parametros</displayName>
+            <goals>
+                <goal>test</goal>
+            </goals>
+            <properties>
+                <groups>ppss.categorias.ConParametros</mis.categorias>
+            </properties>
+        </action>
+        <action>
+            <actionName>CUSTOM-test sin parametros</actionName>
+            <displayName>test sin parametros</displayName>
+            <goals>
+                <goal>test</goal>
+            </goals>
+            <properties>
+                <groups>ppss.categorias.SinParametros</mis.categorias>
+            </properties>
+        </action>
+        <action>
+            <actionName>CUSTOM-Test Datos Tabla A</actionName>
+            <displayName>Test Datos Tabla A</displayName>
+            <goals>
+                <goal>test</goal>
+            </goals>
+            <properties>
+                <groups>ppss.categorias.TestLlanosTablaA</mis.categorias>
+                
+            </properties>
+        </action>
+        <action>
+            <actionName>CUSTOM-Test Datos Tabla B</actionName>
+            <displayName>Test Datos Tabla B</displayName>
+            <goals>
+                <goal>test</goal>
+            </goals>
+            <properties>
+                <groups>ppss.categorias.TestLlanosTablaB</mis.categorias>
+            </properties>
+        </action>
+        <action>
+            <actionName>CUSTOM-Test Datos A y B</actionName>
+            <displayName>Test Datos A y B</displayName>
+            <goals>
+                <goal>test</goal>
+            </goals>
+            <properties>
+                <groups>ppss.categorias.TestLlanosTablaA, ppss.categorias.TestLlanosTablaB</mis.categorias>
+            </properties>
+        </action>
     </actions>

@@ -14,8 +14,10 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
+import org.junit.experimental.categories.Category;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
+import ppss.categorias.ConParametros;
 
 /**
  *
@@ -53,17 +55,17 @@ public class TestDatosConParametros {
     }
     
     private Datos datos = new Datos(); 
-    private ArrayList<Integer> listaLectura = new ArrayList<Integer>();
+    private ArrayList<Integer> listaLectura;
     private Tramo resultadoEsperado, resultadoReal; 
     
     public TestDatosConParametros(ArrayList<Integer> listaLectura, Tramo resultadoEsperado) {
         this.listaLectura = listaLectura; 
         this.resultadoEsperado = resultadoEsperado;
     }
-   
+    
+    @Category(ConParametros.class)
     @Test
     public void testCalculaTasa() {
-        resultadoReal = datos.buscarTramoLlanoMasLargo(listaLectura);
-        assertTrue(resultadoEsperado.equals(resultadoReal));
+        assertTrue(resultadoEsperado.equals(datos.buscarTramoLlanoMasLargo(listaLectura)));
     }
 }

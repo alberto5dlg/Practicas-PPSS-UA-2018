@@ -13,11 +13,17 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
+import org.junit.experimental.categories.Categories;
+import org.junit.experimental.categories.Category;
+import ppss.categorias.SinParametros;
+import ppss.categorias.TestLlanosTablaA;
+import ppss.categorias.TestLlanosTablaB;
 
 /**
  *
  * @author ppss
  */
+
 public class TestDatosSinParametros {
     
     public TestDatosSinParametros() {
@@ -44,6 +50,7 @@ public class TestDatosSinParametros {
     private Tramo resultadoEsperado;
     private Tramo resultadoReal; 
     
+    @Category({SinParametros.class,TestLlanosTablaA.class})
     @Test
     public void TestC1A() {
         listaLectura = new ArrayList<>(Arrays.asList(3));
@@ -53,6 +60,7 @@ public class TestDatosSinParametros {
         assertTrue(resultadoEsperado.equals(resultadoReal)); 
     }
     
+    @Category({SinParametros.class,TestLlanosTablaA.class})
     @Test
     public void TestC2A() {
         listaLectura = new ArrayList<>(Arrays.asList(100,100,100,100));
@@ -62,6 +70,7 @@ public class TestDatosSinParametros {
         assertTrue(resultadoEsperado.equals(resultadoReal)); 
     }
     
+    @Category({SinParametros.class,TestLlanosTablaA.class})
     @Test
     public void TestC3A() {
         listaLectura = new ArrayList<>(Arrays.asList(120,140,180,180,180));
@@ -71,6 +80,7 @@ public class TestDatosSinParametros {
         assertTrue(resultadoEsperado.equals(resultadoReal)); 
     }
     
+    @Category(TestLlanosTablaB.class)
     @Test
     public void TestC1B() {
         listaLectura = new ArrayList<>(Arrays.asList(-1));
@@ -80,6 +90,7 @@ public class TestDatosSinParametros {
         assertTrue(resultadoEsperado.equals(resultadoReal)); 
     }
     
+    @Category(TestLlanosTablaB.class)
     @Test
     public void TestC2B() {
         listaLectura = new ArrayList<>(Arrays.asList(-1,-1,-1,-1));
@@ -89,6 +100,7 @@ public class TestDatosSinParametros {
         assertTrue(resultadoEsperado.equals(resultadoReal)); 
     }
     
+    @Category(TestLlanosTablaB.class) 
     @Test
     public void TestC3B() {
         listaLectura = new ArrayList<>(Arrays.asList(120,140,-10,-10,-10));

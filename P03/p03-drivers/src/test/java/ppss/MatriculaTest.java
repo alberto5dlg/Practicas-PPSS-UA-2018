@@ -11,11 +11,14 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
+import org.junit.experimental.categories.Category;
+import ppss.categorias.SinParametros;
 
 /**
  *
  * @author ppss
  */
+@Category(SinParametros.class)
 public class MatriculaTest {
     
     public MatriculaTest() {
