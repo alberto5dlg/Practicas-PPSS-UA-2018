@@ -30,7 +30,7 @@
                 <goal>test</goal>
             </goals>
             <properties>
-                <groups>ppss.categorias.ConParametros</mis.categorias>
+                <mis.categorias>ppss.categorias.ConParametros</mis.categorias>
             </properties>
         </action>
         <action>
@@ -40,7 +40,7 @@
                 <goal>test</goal>
             </goals>
             <properties>
-                <groups>ppss.categorias.SinParametros</mis.categorias>
+                <mis.categorias>ppss.categorias.SinParametros</mis.categorias>
             </properties>
         </action>
         <action>
@@ -50,7 +50,7 @@
                 <goal>test</goal>
             </goals>
             <properties>
-                <groups>ppss.categorias.TestLlanosTablaA</mis.categorias>
+                <mis.categorias>ppss.categorias.TestLlanosTablaA</mis.categorias>
                 
             </properties>
         </action>
@@ -61,7 +61,7 @@
                 <goal>test</goal>
             </goals>
             <properties>
-                <groups>ppss.categorias.TestLlanosTablaB</mis.categorias>
+                <mis.categorias>ppss.categorias.TestLlanosTablaB</mis.categorias>
             </properties>
         </action>
         <action>
@@ -71,7 +71,7 @@
                 <goal>test</goal>
             </goals>
             <properties>
-                <groups>ppss.categorias.TestLlanosTablaA, ppss.categorias.TestLlanosTablaB</mis.categorias>
+                <mis.categorias>ppss.categorias.TestLlanosTablaA, ppss.categorias.TestLlanosTablaB</mis.categorias>
             </properties>
         </action>
     </actions>

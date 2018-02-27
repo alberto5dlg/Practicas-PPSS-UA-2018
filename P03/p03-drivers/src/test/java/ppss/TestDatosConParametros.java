@@ -42,15 +42,15 @@ public class TestDatosConParametros {
     public void tearDown() {
     }
 
-    @Parameterized.Parameters(name = "C{index})")
+    @Parameterized.Parameters(name = "C{index}")
     public static Collection<Object[]> data() {
         return Arrays.asList(new Object[][] {
-            {Arrays.asList(3), new Tramo(0,0)},
-            {Arrays.asList(100,100,100,100), new Tramo(0,3)},
-            {Arrays.asList(120,140,180,180,180), new Tramo(2,2)},
-            {Arrays.asList(-1), new Tramo(0,0)},
-            {Arrays.asList(-1,-1,-1,-1), new Tramo(0,3)},
-            {Arrays.asList(120,140,-10-10-10), new Tramo(2,2)}
+            {new ArrayList<>(Arrays.asList(3)), new Tramo(0,0)},
+            {new ArrayList<>(Arrays.asList(100,100,100,100)), new Tramo(0,3)},
+            {new ArrayList<>(Arrays.asList(120,140,180,180,180)), new Tramo(2,2)},
+            {new ArrayList<>(Arrays.asList(-1)), new Tramo(0,0)},
+            {new ArrayList<>(Arrays.asList(-1,-1,-1,-1)), new Tramo(0,3)},
+            {new ArrayList<>(Arrays.asList(120,140,-10,-10,-10)), new Tramo(2,2)}
         });
     }
     
