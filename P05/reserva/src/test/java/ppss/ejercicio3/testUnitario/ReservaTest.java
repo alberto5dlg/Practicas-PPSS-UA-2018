@@ -5,6 +5,8 @@
  */
 package ppss.ejercicio3.testUnitario;
 
+import java.util.ArrayList;
+import java.util.Arrays;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -22,7 +24,9 @@ import ppss.ejercicio3.excepciones.ReservaException;
  */
 public class ReservaTest {
     
+    
     public ReservaTest() {
+        
     }
     
     @BeforeClass
@@ -41,120 +45,21 @@ public class ReservaTest {
     public void tearDown() {
     }
 
-   
-    //String resultadoEsperado = "ERROR de permisos; ";
-    /**
-     * Test of realizaReserva method, of class Reserva.
-     */
+    
+    private ArrayList<String> socios = new ArrayList<>(Arrays.asList("Luis")); 
+    private ArrayList<String> isbns = new ArrayList<>(Arrays.asList("11111","22222")); 
+    
     @Test
     public void testC1() throws Exception { 
-        Exception resultadoEsperado = new ReservaException("ERROR de permisos; ");
-        try {
-            String login = "xxxx"; 
-            String password = "xxxx";
-            String user = "Luis";
-            String[] isbns = {"11111"};
-            
-            
-            TestableReserva sut = new TestableReserva();
-            sut.setCompruebaPermisos(false);
-
-            IOperacionBO operacionStub = new OperacionStub(resultadoEsperado); 
-            OperationBOFactory.setServicio(operacionStub);
-
-            sut.realizaReserva(login, password, login, isbns);
-            
-        }catch (Exception resultadoReal) {           
-            assertEquals(resultadoEsperado.getMessage(), resultadoReal.getMessage());
-        } 
+        TestableReserva sut = new TestableReserva(); 
+        sut.setCompruebaPermisos(false);
+        
+        IOperacionBO stub = new OperacionStub(true, socios,isbns);
+        OperationBOFactory.setServicio(stub);
+        try{
+            sut.realizaReserva("xxxx", "xxxx", "Luis", Arrays.asList("11111"));
+        } catch (Exception ex){
+            assertEquals(ex.getMessage(), "ERROR de permisos; "); 
+        }   
     }
-    
-    @Test
-    public void testC2() throws Exception {
-        try {
-            String login = "ppss"; 
-            String password = "ppss";
-            String user = "Luis";
-            String[] isbns = {"11111","22222"};
-            
-            
-            TestableReserva sut = new TestableReserva();
-            sut.setCompruebaPermisos(true);
-
-            IOperacionBO operacionStub = new OperacionStub(null); 
-            OperationBOFactory.setServicio(operacionStub);
-
-            sut.realizaReserva(login, password, login, isbns);
-            
-        }catch (Exception resultadoReal) {           
-            
-        } 
-    }
-    @Test
-    public void testC3() throws Exception {
-        Exception resultadoEsperado = new ReservaException("ISBN invalido:33333; ");
-        try {
-            String login = "ppss"; 
-            String password = "ppss";
-            String user = "Luis";
-            String[] isbns = {"33333"};
-            
-            
-            TestableReserva sut = new TestableReserva();
-            sut.setCompruebaPermisos(true);
-
-            IOperacionBO operacionStub = new OperacionStub(resultadoEsperado); 
-            OperationBOFactory.setServicio(operacionStub);
-
-            sut.realizaReserva(login, password, login, isbns);
-            
-        }catch (Exception resultadoReal) {           
-            assertEquals(resultadoEsperado.getMessage(), resultadoReal.getMessage());
-        } 
-    }
-    @Test
-    public void testC4() throws Exception {
-        Exception resultadoEsperado = new ReservaException("SOCIO invalido; ");
-        try {
-            String login = "ppss"; 
-            String password = "ppss";
-            String user = "Pepe";
-            String[] isbns = {"11111"};
-            
-            
-            TestableReserva sut = new TestableReserva();
-            sut.setCompruebaPermisos(true);
-
-            IOperacionBO operacionStub = new OperacionStub(resultadoEsperado); 
-            OperationBOFactory.setServicio(operacionStub);
-
-            sut.realizaReserva(login, password, login, isbns);
-            
-        }catch (Exception resultadoReal) {           
-            assertEquals(resultadoEsperado.getMessage(), resultadoReal.getMessage());
-        } 
-    }
-    @Test
-    public void testC5() throws Exception {
-        Exception resultadoEsperado = new ReservaException("CONEXION invalida; ");
-        try {
-            String login = "ppss"; 
-            String password = "ppss";
-            String user = "Luis";
-            String[] isbns = {"11111"};
-            
-            
-            TestableReserva sut = new TestableReserva();
-            sut.setCompruebaPermisos(true);
-
-            IOperacionBO operacionStub = new OperacionStub(resultadoEsperado); 
-            OperationBOFactory.setServicio(operacionStub);
-
-            sut.realizaReserva(login, password, login, isbns);
-            
-        }catch (Exception resultadoReal) {           
-            assertEquals(resultadoEsperado, resultadoReal);
-        } 
-    }
-    
 }
