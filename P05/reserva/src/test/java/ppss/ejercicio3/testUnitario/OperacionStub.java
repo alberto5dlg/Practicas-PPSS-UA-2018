@@ -33,7 +33,7 @@ public class OperacionStub implements IOperacionBO {
             throw new IsbnInvalidoException(); 
     }
     
-    public OperacionStub(boolean dbAcceso, ArrayList<String> socios, ArrayList<String> isbns) {
+    public void setOperacionStub(boolean dbAcceso, ArrayList<String> socios, ArrayList<String> isbns) {
         this.socios = socios;
         this.dbAcceso = dbAcceso; 
         this.isbns = isbns; 
