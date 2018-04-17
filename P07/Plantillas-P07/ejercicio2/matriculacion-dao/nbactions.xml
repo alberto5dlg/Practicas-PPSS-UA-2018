@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<actions>
+        <action>
+            <actionName>CUSTOM-Restaurar DB</actionName>
+            <displayName>Restaurar DB</displayName>
+            <goals>
+                <goal>sql:execute@create-db</goal>
+            </goals>
+        </action>
+        <action>
+            <actionName>CUSTOM-Inicializar BD</actionName>
+            <displayName>Inicializar BD</displayName>
+            <goals>
+                <goal>sql:execute@create-data</goal>
+            </goals>
+        </action>
+        <action>
+            <actionName>CUSTOM-Pruebas Unitarias</actionName>
+            <displayName>Pruebas Unitarias</displayName>
+            <goals>
+                <goal>test</goal>
+            </goals>
+        </action>
+        <action>
+            <actionName>CUSTOM-Pruebas de Integracion Fase 1</actionName>
+            <displayName>Pruebas de Integracion Fase 1</displayName>
+            <goals>
+                <goal>failsafe:integration-test</goal>
+            </goals>
+        </action>
+    </actions>

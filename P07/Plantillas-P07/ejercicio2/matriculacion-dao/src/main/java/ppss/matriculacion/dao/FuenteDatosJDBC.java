@@ -24,6 +24,6 @@ public class FuenteDatosJDBC {
 	}
 	
 	public Connection getConnection() throws SQLException {
-		return DriverManager.getConnection("jdbc:mysql://localhost:3306/ESQUEMA_BD","root", "ppss");
+		return DriverManager.getConnection("jdbc:mysql://localhost:3306/matriculacion","root", "ppss");
 	}
 }
