@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta content="text/html; charset=UTF-8" http-equiv="content-type" />
+	<title>Test Suite-Ejercicio1</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">Ejercicio1</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>http://localhost:8080/jpetstore/<datalist><option>http://localhost:8080/jpetstore/</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>link=Enter the Store<datalist><option>link=Enter the Store</option><option>//a[contains(text(),'Enter the Store')]</option><option>//div[@id='Content']/p/a</option><option>//a[contains(@href, 'actions/Catalog.action')]</option><option>//a</option><option>css=a</option></datalist></td><td></td>
+</tr>
+<tr><td>verifyTitle</td><td>JPetStore Demo<datalist><option>JPetStore Demo</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>//div[@id='MainImageContent']/map/area[2]<datalist><option>//div[@id='MainImageContent']/map/area[2]</option><option>//area[2]</option><option>css=area[alt="Fish"]</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>link=FI-SW-02<datalist><option>link=FI-SW-02</option><option>//a[contains(text(),'FI-SW-02')]</option><option>//div[@id='Catalog']/table/tbody/tr[3]/td/a</option><option>//a[contains(@href, '/jpetstore/actions/Catalog.action?viewProduct=&amp;productId=FI-SW-02')]</option><option>//tr[3]/td/a</option></datalist></td><td></td>
+</tr>
+<tr><td>verifyText</td><td>//div[@id='Catalog']/table/tbody/tr[2]/td[3]<datalist><option>//div[@id='Catalog']/table/tbody/tr[2]/td[3]</option><option>//td[3]</option></datalist></td><td>Toothless Tiger Shark</td>
+</tr>
+<tr><td>click</td><td>link=Return to FISH<datalist><option>link=Return to FISH</option><option>//a[contains(text(),'Return to FISH')]</option><option>//div[@id='BackLink']/a</option><option>xpath=(//a[contains(@href, '/jpetstore/actions/Catalog.action?viewCategory=&amp;categoryId=FISH')])[2]</option><option>//body/div[2]/div/a</option><option>css=#BackLink &gt; a</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>link=Return to Main Menu<datalist><option>link=Return to Main Menu</option><option>//a[contains(text(),'Return to Main Menu')]</option><option>//div[@id='BackLink']/a</option><option>xpath=(//a[contains(@href, '/jpetstore/actions/Catalog.action')])[7]</option><option>//body/div[2]/div/a</option><option>css=#BackLink &gt; a</option></datalist></td><td></td>
+</tr>
+<tr><td>verifyText</td><td>link=Sign In<datalist><option>link=Sign In</option><option>//a[contains(text(),'Sign In')]</option><option>//div[@id='MenuContent']/a[2]</option><option>//a[contains(@href, '/jpetstore/actions/Account.action?signonForm=')]</option><option>//a[2]</option></datalist></td><td>Sign In</td>
+</tr>
+</tbody></table>
+</body>
+</html>

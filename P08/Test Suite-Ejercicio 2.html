@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta content="text/html; charset=UTF-8" http-equiv="content-type" />
+	<title>Test Suite-Ejercicio 2</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">test-compra-new-user</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>http://localhost:8080/jpetstore/actions/Catalog.action<datalist><option>http://localhost:8080/jpetstore/actions/Catalog.action</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>//div[@id='MainImageContent']/map/area[3]<datalist><option>//div[@id='MainImageContent']/map/area[3]</option><option>//area[3]</option><option>css=area[alt="Dogs"]</option></datalist></td><td></td>
+</tr>
+<tr><td>verifyText</td><td>//div[@id='Catalog']/h2<datalist><option>//div[@id='Catalog']/h2</option><option>//h2</option><option>css=h2</option></datalist></td><td>Dogs</td>
+</tr>
+<tr><td>verifyText</td><td>//div[@id='Catalog']/table/tbody/tr[2]/td[2]<datalist><option>//div[@id='Catalog']/table/tbody/tr[2]/td[2]</option><option>//td[2]</option></datalist></td><td>Bulldog</td>
+</tr>
+<tr><td>click</td><td>link=K9-BD-01<datalist><option>link=K9-BD-01</option><option>//a[contains(text(),'K9-BD-01')]</option><option>//div[@id='Catalog']/table/tbody/tr[2]/td/a</option><option>//a[contains(@href, '/jpetstore/actions/Catalog.action?viewProduct=&amp;productId=K9-BD-01')]</option><option>//td/a</option><option>css=td &gt; a</option></datalist></td><td></td>
+</tr>
+<tr><td>verifyText</td><td>//div[@id='Catalog']/h2<datalist><option>//div[@id='Catalog']/h2</option><option>//h2</option><option>css=h2</option></datalist></td><td>Bulldog</td>
+</tr>
+<tr><td>verifyText</td><td>//div[@id='Catalog']/table/tbody/tr[2]/td[3]<datalist><option>//div[@id='Catalog']/table/tbody/tr[2]/td[3]</option><option>//td[3]</option></datalist></td><td>Male Adult Bulldog</td>
+</tr>
+<tr><td>click</td><td>link=Add to Cart<datalist><option>link=Add to Cart</option><option>//a[contains(text(),'Add to Cart')]</option><option>//div[@id='Catalog']/table/tbody/tr[2]/td[5]/a</option><option>//a[contains(@href, '/jpetstore/actions/Cart.action?addItemToCart=&amp;workingItemId=EST-6')]</option><option>//td[5]/a</option><option>css=a.Button</option></datalist></td><td></td>
+</tr>
+<tr><td>verifyText</td><td>//div[@id='Cart']/h2<datalist><option>//div[@id='Cart']/h2</option><option>//h2</option><option>css=h2</option></datalist></td><td>Shopping Cart</td>
+</tr>
+<tr><td>click</td><td>name=EST-6<datalist><option>name=EST-6</option><option>//input[@name='EST-6']</option><option>//div[@id='Cart']/form/table/tbody/tr[2]/td[5]/input</option><option>//td[5]/input</option><option>css=input[name="EST-6"]</option></datalist></td><td></td>
+</tr>
+<tr><td>type</td><td>name=EST-6<datalist><option>name=EST-6</option><option>//input[@name='EST-6']</option><option>//div[@id='Cart']/form/table/tbody/tr[2]/td[5]/input</option><option>//td[5]/input</option><option>css=input[name="EST-6"]</option></datalist></td><td>2</td>
+</tr>
+<tr><td>click</td><td>name=updateCartQuantities<datalist><option>name=updateCartQuantities</option><option>//input[@name='updateCartQuantities']</option><option>//div[@id='Cart']/form/table/tbody/tr[3]/td/input</option><option>//tr[3]/td/input</option><option>css=input[name="updateCartQuantities"]</option></datalist></td><td></td>
+</tr>
+<tr><td>verifyText</td><td>//div[@id='Cart']/form/table/tbody/tr[3]/td<datalist><option>//div[@id='Cart']/form/table/tbody/tr[3]/td</option><option>//tr[3]/td</option></datalist></td><td>Sub Total: $37,00</td>
+</tr>
+<tr><td>click</td><td>//div[@id='QuickLinks']/a[4]/img<datalist><option>//div[@id='QuickLinks']/a[4]/img</option><option>//a[4]/img</option></datalist></td><td></td>
+</tr>
+<tr><td>verifyText</td><td>//div[@id='Catalog']/h2<datalist><option>//div[@id='Catalog']/h2</option><option>//h2</option><option>css=h2</option></datalist></td><td>Cats</td>
+</tr>
+<tr><td>click</td><td>name=img_cart<datalist><option>name=img_cart</option><option>//img[@name='img_cart']</option><option>//div[@id='MenuContent']/a/img</option><option>//div[2]/div/a/img</option><option>css=img[name="img_cart"]</option></datalist></td><td></td>
+</tr>
+<tr><td>verifyText</td><td>//div[@id='Cart']/form/table/tbody/tr[2]/td[3]<datalist><option>//div[@id='Cart']/form/table/tbody/tr[2]/td[3]</option><option>//td[3]</option></datalist></td><td>Male Adult Bulldog</td>
+</tr>
+<tr><td>verifyText</td><td>//div[@id='Cart']/form/table/tbody/tr[3]/td<datalist><option>//div[@id='Cart']/form/table/tbody/tr[3]/td</option><option>//tr[3]/td</option></datalist></td><td>Sub Total: $37,00</td>
+</tr>
+<tr><td>click</td><td>//div[@id='QuickLinks']/a[4]/img<datalist><option>//div[@id='QuickLinks']/a[4]/img</option><option>//a[4]/img</option></datalist></td><td></td>
+</tr>
+<tr><td>verifyText</td><td>//div[@id='Catalog']/table/tbody/tr[3]/td[2]<datalist><option>//div[@id='Catalog']/table/tbody/tr[3]/td[2]</option><option>//tr[3]/td[2]</option></datalist></td><td>Persian</td>
+</tr>
+<tr><td>click</td><td>link=FL-DLH-02<datalist><option>link=FL-DLH-02</option><option>//a[contains(text(),'FL-DLH-02')]</option><option>//div[@id='Catalog']/table/tbody/tr[3]/td/a</option><option>//a[contains(@href, '/jpetstore/actions/Catalog.action?viewProduct=&amp;productId=FL-DLH-02')]</option><option>//tr[3]/td/a</option></datalist></td><td></td>
+</tr>
+<tr><td>verifyText</td><td>//div[@id='Catalog']/table/tbody/tr[2]/td[3]<datalist><option>//div[@id='Catalog']/table/tbody/tr[2]/td[3]</option><option>//td[3]</option></datalist></td><td>Adult Female Persian</td>
+</tr>
+<tr><td>click</td><td>link=Add to Cart<datalist><option>link=Add to Cart</option><option>//a[contains(text(),'Add to Cart')]</option><option>//div[@id='Catalog']/table/tbody/tr[2]/td[5]/a</option><option>//a[contains(@href, '/jpetstore/actions/Cart.action?addItemToCart=&amp;workingItemId=EST-16')]</option><option>//td[5]/a</option><option>css=a.Button</option></datalist></td><td></td>
+</tr>
+<tr><td>verifyText</td><td>link=EST-6<datalist><option>link=EST-6</option><option>//a[contains(text(),'EST-6')]</option><option>//div[@id='Cart']/form/table/tbody/tr[2]/td/a</option><option>//a[contains(@href, '/jpetstore/actions/Catalog.action?viewItem=&amp;itemId=EST-6')]</option><option>//td/a</option><option>css=td &gt; a</option></datalist></td><td>EST-6</td>
+</tr>
+<tr><td>verifyText</td><td>link=EST-16<datalist><option>link=EST-16</option><option>//a[contains(text(),'EST-16')]</option><option>//div[@id='Cart']/form/table/tbody/tr[3]/td/a</option><option>//a[contains(@href, '/jpetstore/actions/Catalog.action?viewItem=&amp;itemId=EST-16')]</option><option>//tr[3]/td/a</option></datalist></td><td>EST-16</td>
+</tr>
+<tr><td>verifyText</td><td>//div[@id='Cart']/form/table/tbody/tr[4]/td<datalist><option>//div[@id='Cart']/form/table/tbody/tr[4]/td</option><option>//tr[4]/td</option></datalist></td><td>Sub Total: $130,50</td>
+</tr>
+<tr><td>click</td><td>xpath=(//a[contains(text(),'Remove')])[2]<datalist><option>xpath=(//a[contains(text(),'Remove')])[2]</option><option>//div[@id='Cart']/form/table/tbody/tr[3]/td[8]/a</option><option>//a[contains(@href, '/jpetstore/actions/Cart.action?removeItemFromCart=&amp;cartItem=EST-16')]</option><option>//tr[3]/td[8]/a</option></datalist></td><td></td>
+</tr>
+<tr><td>verifyNotText</td><td>//div[@id='Cart']/form/table<datalist><option>//div[@id='Cart']/form/table</option><option>//table</option><option>css=table</option></datalist></td><td>EST-16</td>
+</tr>
+<tr><td>verifyText</td><td>//div[@id='Cart']/form/table/tbody/tr[3]/td<datalist><option>//div[@id='Cart']/form/table/tbody/tr[3]/td</option><option>//tr[3]/td</option></datalist></td><td>Sub Total: $37,00</td>
+</tr>
+<tr><td>click</td><td>link=Proceed to Checkout<datalist><option>link=Proceed to Checkout</option><option>//a[contains(text(),'Proceed to Checkout')]</option><option>//div[@id='Cart']/a</option><option>//a[contains(@href, '/jpetstore/actions/Order.action?newOrderForm=')]</option><option>//div[2]/div[2]/div/a</option><option>css=#Cart &gt; a.Button</option></datalist></td><td></td>
+</tr>
+<tr><td>verifyText</td><td>//div[@id='Content']/ul/li<datalist><option>//div[@id='Content']/ul/li</option><option>//li</option><option>css=li</option></datalist></td><td>You must sign on before attempting to check out. Please sign on and try checking out again.</td>
+</tr>
+<tr><td>click</td><td>name=username<datalist><option>id=stripes-50751113</option><option>name=username</option><option>//input[@id='stripes-50751113']</option><option>//div[@id='Catalog']/form/p[2]/input</option><option>//p[2]/input</option><option>css=#stripes-50751113</option></datalist></td><td></td>
+</tr>
+<tr><td>type</td><td>name=username<datalist><option>id=stripes-50751113</option><option>name=username</option><option>//input[@id='stripes-50751113']</option><option>//div[@id='Catalog']/form/p[2]/input</option><option>//p[2]/input</option><option>css=#stripes-50751113</option></datalist></td><td>z</td>
+</tr>
+<tr><td>click</td><td>name=password<datalist><option>name=password</option><option>//input[@name='password']</option><option>//div[@id='Catalog']/form/p[2]/input[2]</option><option>//p[2]/input[2]</option><option>css=input[name="password"]</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>name=password<datalist><option>name=password</option><option>//input[@name='password']</option><option>//div[@id='Catalog']/form/p[2]/input[2]</option><option>//p[2]/input[2]</option><option>css=input[name="password"]</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>name=password<datalist><option>name=password</option><option>//input[@name='password']</option><option>//div[@id='Catalog']/form/p[2]/input[2]</option><option>//p[2]/input[2]</option><option>css=input[name="password"]</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>name=password<datalist><option>name=password</option><option>//input[@name='password']</option><option>//div[@id='Catalog']/form/p[2]/input[2]</option><option>//p[2]/input[2]</option><option>css=input[name="password"]</option></datalist></td><td></td>
+</tr>
+<tr><td>doubleClick</td><td>name=password<datalist><option>name=password</option><option>//input[@name='password']</option><option>//div[@id='Catalog']/form/p[2]/input[2]</option><option>//p[2]/input[2]</option><option>css=input[name="password"]</option></datalist></td><td></td>
+</tr>
+<tr><td>type</td><td>name=password<datalist><option>name=password</option><option>//input[@name='password']</option><option>//div[@id='Catalog']/form/p[2]/input[2]</option><option>//p[2]/input[2]</option><option>css=input[name="password"]</option></datalist></td><td>z</td>
+</tr>
+<tr><td>click</td><td>name=signon<datalist><option>name=signon</option><option>//input[@name='signon']</option><option>//div[@id='Catalog']/form/input</option><option>//div[2]/div/form/input</option><option>css=input[name="signon"]</option></datalist></td><td></td>
+</tr>
+<tr><td>verifyText</td><td>//div[@id='Content']/ul/li<datalist><option>//div[@id='Content']/ul/li</option><option>//li</option><option>css=li</option></datalist></td><td>Invalid username or password. Signon failed.</td>
+</tr>
+<tr><td>click</td><td>link=Register Now!<datalist><option>link=Register Now!</option><option>//a[contains(text(),'Register Now!')]</option><option>//div[@id='Catalog']/a</option><option>//a[contains(@href, '/jpetstore/actions/Account.action?newAccountForm=')]</option><option>//body/div[2]/div/a</option><option>css=#Catalog &gt; a</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>name=username<datalist><option>id=stripes-1886788710</option><option>name=username</option><option>//input[@id='stripes-1886788710']</option><option>//div[@id='Catalog']/form/table/tbody/tr/td[2]/input</option><option>//td[2]/input</option><option>css=#stripes-1886788710</option></datalist></td><td></td>
+</tr>
+<tr><td>type</td><td>name=username<datalist><option>id=stripes-1886788710</option><option>name=username</option><option>//input[@id='stripes-1886788710']</option><option>//div[@id='Catalog']/form/table/tbody/tr/td[2]/input</option><option>//td[2]/input</option><option>css=#stripes-1886788710</option></datalist></td><td>z</td>
+</tr>
+<tr><td>type</td><td>name=password<datalist><option>name=password</option><option>//input[@name='password']</option><option>//div[@id='Catalog']/form/table/tbody/tr[2]/td[2]/input</option><option>//tr[2]/td[2]/input</option><option>css=input[name="password"]</option></datalist></td><td>z</td>
+</tr>
+<tr><td>type</td><td>name=repeatedPassword<datalist><option>name=repeatedPassword</option><option>//input[@name='repeatedPassword']</option><option>//div[@id='Catalog']/form/table/tbody/tr[3]/td[2]/input</option><option>//tr[3]/td[2]/input</option><option>css=input[name="repeatedPassword"]</option></datalist></td><td>z</td>
+</tr>
+<tr><td>type</td><td>name=account.firstName<datalist><option>name=account.firstName</option><option>//input[@name='account.firstName']</option><option>//div[@id='Catalog']/form/table[2]/tbody/tr/td[2]/input</option><option>//table[2]/tbody/tr/td[2]/input</option><option>css=input[name="account.firstName"]</option></datalist></td><td>z</td>
+</tr>
+<tr><td>type</td><td>name=account.lastName<datalist><option>name=account.lastName</option><option>//input[@name='account.lastName']</option><option>//div[@id='Catalog']/form/table[2]/tbody/tr[2]/td[2]/input</option><option>//table[2]/tbody/tr[2]/td[2]/input</option><option>css=input[name="account.lastName"]</option></datalist></td><td>z</td>
+</tr>
+<tr><td>type</td><td>name=account.email<datalist><option>name=account.email</option><option>//input[@name='account.email']</option><option>//div[@id='Catalog']/form/table[2]/tbody/tr[3]/td[2]/input</option><option>//table[2]/tbody/tr[3]/td[2]/input</option><option>css=input[name="account.email"]</option></datalist></td><td>z</td>
+</tr>
+<tr><td>type</td><td>name=account.phone<datalist><option>name=account.phone</option><option>//input[@name='account.phone']</option><option>//div[@id='Catalog']/form/table[2]/tbody/tr[4]/td[2]/input</option><option>//tr[4]/td[2]/input</option><option>css=input[name="account.phone"]</option></datalist></td><td>z</td>
+</tr>
+<tr><td>type</td><td>name=account.address1<datalist><option>name=account.address1</option><option>//input[@name='account.address1']</option><option>//div[@id='Catalog']/form/table[2]/tbody/tr[5]/td[2]/input</option><option>//tr[5]/td[2]/input</option><option>css=input[name="account.address1"]</option></datalist></td><td>z</td>
+</tr>
+<tr><td>type</td><td>name=account.address2<datalist><option>name=account.address2</option><option>//input[@name='account.address2']</option><option>//div[@id='Catalog']/form/table[2]/tbody/tr[6]/td[2]/input</option><option>//tr[6]/td[2]/input</option><option>css=input[name="account.address2"]</option></datalist></td><td>z</td>
+</tr>
+<tr><td>type</td><td>name=account.city<datalist><option>name=account.city</option><option>//input[@name='account.city']</option><option>//div[@id='Catalog']/form/table[2]/tbody/tr[7]/td[2]/input</option><option>//tr[7]/td[2]/input</option><option>css=input[name="account.city"]</option></datalist></td><td>z</td>
+</tr>
+<tr><td>type</td><td>name=account.state<datalist><option>name=account.state</option><option>//input[@name='account.state']</option><option>//div[@id='Catalog']/form/table[2]/tbody/tr[8]/td[2]/input</option><option>//tr[8]/td[2]/input</option><option>css=input[name="account.state"]</option></datalist></td><td>z</td>
+</tr>
+<tr><td>type</td><td>name=account.zip<datalist><option>name=account.zip</option><option>//input[@name='account.zip']</option><option>//div[@id='Catalog']/form/table[2]/tbody/tr[9]/td[2]/input</option><option>//tr[9]/td[2]/input</option><option>css=input[name="account.zip"]</option></datalist></td><td>z</td>
+</tr>
+<tr><td>type</td><td>name=account.country<datalist><option>name=account.country</option><option>//input[@name='account.country']</option><option>//div[@id='Catalog']/form/table[2]/tbody/tr[10]/td[2]/input</option><option>//tr[10]/td[2]/input</option><option>css=input[name="account.country"]</option></datalist></td><td>z</td>
+</tr>
+<tr><td>click</td><td>name=newAccount<datalist><option>name=newAccount</option><option>//input[@name='newAccount']</option><option>//div[@id='Catalog']/form/input</option><option>//div[2]/div/form/input</option><option>css=input[name="newAccount"]</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>name=img_cart<datalist><option>name=img_cart</option><option>//img[@name='img_cart']</option><option>//div[@id='MenuContent']/a/img</option><option>//div[2]/div/a/img</option><option>css=img[name="img_cart"]</option></datalist></td><td></td>
+</tr>
+<tr><td>verifyText</td><td>//div[@id='Cart']/form/table/tbody/tr[3]/td<datalist><option>//div[@id='Cart']/form/table/tbody/tr[3]/td</option><option>//tr[3]/td</option></datalist></td><td>Sub Total: $37,00</td>
+</tr>
+<tr><td>click</td><td>link=Proceed to Checkout<datalist><option>link=Proceed to Checkout</option><option>//a[contains(text(),'Proceed to Checkout')]</option><option>//div[@id='Cart']/a</option><option>//a[contains(@href, '/jpetstore/actions/Order.action?newOrderForm=')]</option><option>//div[2]/div[2]/div/a</option><option>css=#Cart &gt; a.Button</option></datalist></td><td></td>
+</tr>
+<tr><td>type</td><td>name=password<datalist><option>name=password</option><option>//input[@name='password']</option><option>//div[@id='Catalog']/form/p[2]/input[2]</option><option>//p[2]/input[2]</option><option>css=input[name="password"]</option></datalist></td><td>z</td>
+</tr>
+<tr><td>click</td><td>name=signon<datalist><option>name=signon</option><option>//input[@name='signon']</option><option>//div[@id='Catalog']/form/input</option><option>//div[2]/div/form/input</option><option>css=input[name="signon"]</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>name=img_cart<datalist><option>name=img_cart</option><option>//img[@name='img_cart']</option><option>//div[@id='MenuContent']/a/img</option><option>//div[2]/div/a/img</option><option>css=img[name="img_cart"]</option></datalist></td><td></td>
+</tr>
+<tr><td>verifyText</td><td>//div[@id='Cart']/form/table/tbody/tr[2]/td[3]<datalist><option>//div[@id='Cart']/form/table/tbody/tr[2]/td[3]</option><option>//td[3]</option></datalist></td><td>Male Adult Bulldog</td>
+</tr>
+<tr><td>click</td><td>link=Proceed to Checkout<datalist><option>link=Proceed to Checkout</option><option>//a[contains(text(),'Proceed to Checkout')]</option><option>//div[@id='Cart']/a</option><option>//a[contains(@href, '/jpetstore/actions/Order.action?newOrderForm=')]</option><option>//div[2]/div[2]/div/a</option><option>css=#Cart &gt; a.Button</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>name=newOrder<datalist><option>name=newOrder</option><option>//input[@name='newOrder']</option><option>//div[@id='Catalog']/form/input</option><option>//div[2]/div/form/input</option><option>css=input[name="newOrder"]</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>link=Confirm<datalist><option>link=Confirm</option><option>//a[contains(text(),'Confirm')]</option><option>//div[@id='Catalog']/a</option><option>//a[contains(@href, '/jpetstore/actions/Order.action?newOrder=&amp;confirmed=true')]</option><option>//div[2]/a</option><option>css=a.Button</option></datalist></td><td></td>
+</tr>
+<tr><td>verifyText</td><td>//div[@id='Catalog']/table/tbody/tr[7]/td[2]<datalist><option>//div[@id='Catalog']/table/tbody/tr[7]/td[2]</option><option>//tr[7]/td[2]</option></datalist></td><td>z</td>
+</tr>
+<tr><td>verifyText</td><td>//div[@id='Catalog']/table/tbody/tr[9]/td[2]<datalist><option>//div[@id='Catalog']/table/tbody/tr[9]/td[2]</option><option>//tr[9]/td[2]</option></datalist></td><td>z</td>
+</tr>
+<tr><td>click</td><td>link=Sign Out<datalist><option>link=Sign Out</option><option>//a[contains(text(),'Sign Out')]</option><option>//div[@id='MenuContent']/a[2]</option><option>//a[contains(@href, '/jpetstore/actions/Account.action?signoff=')]</option><option>//a[2]</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>name=img_cart<datalist><option>name=img_cart</option><option>//img[@name='img_cart']</option><option>//div[@id='MenuContent']/a/img</option><option>//div[2]/div/a/img</option><option>css=img[name="img_cart"]</option></datalist></td><td></td>
+</tr>
+<tr><td>verifyText</td><td>//div[@id='Cart']/form/table/tbody/tr[3]/td<datalist><option>//div[@id='Cart']/form/table/tbody/tr[3]/td</option><option>//tr[3]/td</option></datalist></td><td>Sub Total: $0,00</td>
+</tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">test-compra-old-user</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>http://localhost:8080/jpetstore/actions/Catalog.action<datalist><option>http://localhost:8080/jpetstore/actions/Catalog.action</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>link=Sign In<datalist><option>link=Sign In</option><option>//a[contains(text(),'Sign In')]</option><option>//div[@id='MenuContent']/a[2]</option><option>//a[contains(@href, '/jpetstore/actions/Account.action?signonForm=')]</option><option>//a[2]</option></datalist></td><td></td>
+</tr>
+<tr><td>type</td><td>name=username<datalist><option>id=stripes--1289621217</option><option>name=username</option><option>//input[@id='stripes--1289621217']</option><option>//div[@id='Catalog']/form/p[2]/input</option><option>//p[2]/input</option><option>css=#stripes--1289621217</option></datalist></td><td>z</td>
+</tr>
+<tr><td>type</td><td>name=password<datalist><option>name=password</option><option>//input[@name='password']</option><option>//div[@id='Catalog']/form/p[2]/input[2]</option><option>//p[2]/input[2]</option><option>css=input[name="password"]</option></datalist></td><td>z</td>
+</tr>
+<tr><td>click</td><td>name=signon<datalist><option>name=signon</option><option>//input[@name='signon']</option><option>//div[@id='Catalog']/form/input</option><option>//div[2]/div/form/input</option><option>css=input[name="signon"]</option></datalist></td><td></td>
+</tr>
+<tr><td>verifyText</td><td>id=WelcomeContent<datalist><option>id=WelcomeContent</option><option>//div[@id='WelcomeContent']</option><option>//div[@id='Welcome']/div</option><option>//div[2]/div/div</option><option>css=#WelcomeContent</option></datalist></td><td>Welcome z!</td>
+</tr>
+<tr><td>click</td><td>//div[@id='MainImageContent']/map/area[4]<datalist><option>//div[@id='MainImageContent']/map/area[4]</option><option>//area[4]</option><option>css=area[alt="Reptiles"]</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>link=RP-LI-02<datalist><option>link=RP-LI-02</option><option>//a[contains(text(),'RP-LI-02')]</option><option>//div[@id='Catalog']/table/tbody/tr[3]/td/a</option><option>//a[contains(@href, '/jpetstore/actions/Catalog.action?viewProduct=&amp;productId=RP-LI-02')]</option><option>//tr[3]/td/a</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>link=EST-13<datalist><option>link=EST-13</option><option>//a[contains(text(),'EST-13')]</option><option>//div[@id='Catalog']/table/tbody/tr[2]/td/a</option><option>//a[contains(@href, '/jpetstore/actions/Catalog.action?viewItem=&amp;itemId=EST-13')]</option><option>//td/a</option><option>css=td &gt; a</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>//div[@id='Catalog']/table/tbody/tr[5]/td<datalist><option>//div[@id='Catalog']/table/tbody/tr[5]/td</option><option>//tr[5]/td</option></datalist></td><td></td>
+</tr>
+<tr><td>storeText</td><td>//div[@id='Catalog']/table/tbody/tr[5]/td<datalist><option>//div[@id='Catalog']/table/tbody/tr[5]/td</option><option>//tr[5]/td</option></datalist></td><td>textStock</td>
+</tr>
+<tr><td>echo</td><td>${textStock}<datalist><option>${textStock}</option></datalist></td><td></td>
+</tr>
+<tr><td>storeEval</td><td>storedVars['textStock'].match(/\d+\.?\d*/g)<datalist><option>storedVars['textStock'].match(/\d+\.?\d*/g)</option></datalist></td><td>stock</td>
+</tr>
+<tr><td>echo</td><td>${stock}<datalist><option>${stock}</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>link=Add to Cart<datalist><option>link=Add to Cart</option><option>//a[contains(text(),'Add to Cart')]</option><option>//div[@id='Catalog']/table/tbody/tr[7]/td/a</option><option>//a[contains(@href, '/jpetstore/actions/Cart.action?addItemToCart=&amp;workingItemId=EST-13')]</option><option>//td/a</option><option>css=a.Button</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>name=EST-13<datalist><option>name=EST-13</option><option>//input[@name='EST-13']</option><option>//div[@id='Cart']/form/table/tbody/tr[2]/td[5]/input</option><option>//td[5]/input</option><option>css=input[name="EST-13"]</option></datalist></td><td></td>
+</tr>
+<tr><td>type</td><td>name=EST-13<datalist><option>name=EST-13</option><option>//input[@name='EST-13']</option><option>//div[@id='Cart']/form/table/tbody/tr[2]/td[5]/input</option><option>//td[5]/input</option><option>css=input[name="EST-13"]</option></datalist></td><td>500</td>
+</tr>
+<tr><td>click</td><td>name=updateCartQuantities<datalist><option>name=updateCartQuantities</option><option>//input[@name='updateCartQuantities']</option><option>//div[@id='Cart']/form/table/tbody/tr[3]/td/input</option><option>//tr[3]/td/input</option><option>css=input[name="updateCartQuantities"]</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>link=Proceed to Checkout<datalist><option>link=Proceed to Checkout</option><option>//a[contains(text(),'Proceed to Checkout')]</option><option>//div[@id='Cart']/a</option><option>//a[contains(@href, '/jpetstore/actions/Order.action?newOrderForm=')]</option><option>//div[2]/div[2]/div/a</option><option>css=#Cart &gt; a.Button</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>name=newOrder<datalist><option>name=newOrder</option><option>//input[@name='newOrder']</option><option>//div[@id='Catalog']/form/input</option><option>//div[2]/div/form/input</option><option>css=input[name="newOrder"]</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>link=Confirm<datalist><option>link=Confirm</option><option>//a[contains(text(),'Confirm')]</option><option>//div[@id='Catalog']/a</option><option>//a[contains(@href, '/jpetstore/actions/Order.action?newOrder=&amp;confirmed=true')]</option><option>//div[2]/a</option><option>css=a.Button</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>//div[@id='QuickLinks']/a[3]/img<datalist><option>//div[@id='QuickLinks']/a[3]/img</option><option>//a[3]/img</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>link=RP-LI-02<datalist><option>link=RP-LI-02</option><option>//a[contains(text(),'RP-LI-02')]</option><option>//div[@id='Catalog']/table/tbody/tr[3]/td/a</option><option>//a[contains(@href, '/jpetstore/actions/Catalog.action?viewProduct=&amp;productId=RP-LI-02')]</option><option>//tr[3]/td/a</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>link=EST-13<datalist><option>link=EST-13</option><option>//a[contains(text(),'EST-13')]</option><option>//div[@id='Catalog']/table/tbody/tr[2]/td/a</option><option>//a[contains(@href, '/jpetstore/actions/Catalog.action?viewItem=&amp;itemId=EST-13')]</option><option>//td/a</option><option>css=td &gt; a</option></datalist></td><td></td>
+</tr>
+<tr><td>store</td><td>500<datalist><option>500</option></datalist></td><td>amount</td>
+</tr>
+<tr><td>echo</td><td>${amount}<datalist><option>${amount}</option></datalist></td><td></td>
+</tr>
+<tr><td>storeEval</td><td>storedVars['stock']-storedVars['amount']<datalist><option>storedVars['stock']-storedVars['amount']</option></datalist></td><td>expectedResult</td>
+</tr>
+<tr><td>echo</td><td>${expectedResult}<datalist><option>${expectedResult}</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>//div[@id='Catalog']/table/tbody/tr[5]/td<datalist><option>//div[@id='Catalog']/table/tbody/tr[5]/td</option><option>//tr[5]/td</option></datalist></td><td></td>
+</tr>
+<tr><td>storeText</td><td>//div[@id='Catalog']/table/tbody/tr[5]/td<datalist><option>//div[@id='Catalog']/table/tbody/tr[5]/td</option><option>//tr[5]/td</option></datalist></td><td>numerIguanas</td>
+</tr>
+<tr><td>storeEval</td><td>storedVars['numerIguanas'].match(/\d+\.?\d*/g)<datalist><option>storedVars['numerIguanas'].match(/\d+\.?\d*/g)</option></datalist></td><td>stockRestante</td>
+</tr>
+<tr><td>click</td><td>link=Sign Out<datalist><option>link=Sign Out</option><option>//a[contains(text(),'Sign Out')]</option><option>//div[@id='MenuContent']/a[2]</option><option>//a[contains(@href, '/jpetstore/actions/Account.action?signoff=')]</option><option>//a[2]</option></datalist></td><td></td>
+</tr>
+</tbody></table>
+</body>
+</html>
