@@ -20,7 +20,7 @@ public class LoginPageTest {
         poLogin = PageFactory.initElements(driver, LoginPage.class);
     }
     
-    /*@Test
+    @Test
     public void test_Login_Correct(){
         String loginPageTitle = poLogin.getLoginTitle();
         Assert.assertTrue(loginPageTitle.toLowerCase().contains("guru99 bank"));
@@ -29,7 +29,7 @@ public class LoginPageTest {
         Assert.assertTrue(poManagerPage.getHomePageDashboardUserName()
         .toLowerCase().contains("manger id : mngr128897"));
         driver.close();
-    }*/
+    }
     
     @Test
     public void test_Login_Incorrect(){
