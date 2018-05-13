@@ -54,7 +54,7 @@ public class NewCustomerPageTest {
     public void tearDown() {
     }
     
-   /* @Test
+    @Test
     public void testAddNewCustomer() {
         String loginTitle = poLogin.getLoginTitle();
         Assert.assertTrue(loginTitle.toLowerCase().contains("guru99 bank"));
@@ -95,7 +95,7 @@ public class NewCustomerPageTest {
         
         driver.close(); 
     }
-    */
+    
     @Test
     public void testAddRepeatCustomer() {
         WebDriverWait wait = new WebDriverWait(driver, 10);
