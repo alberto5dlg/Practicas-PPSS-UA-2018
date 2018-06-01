@@ -28,4 +28,39 @@
                 <goal>failsafe:integration-test</goal>
             </goals>
         </action>
+        <action>
+            <actionName>CUSTOM-mvn site</actionName>
+            <displayName>mvn site</displayName>
+            <goals>
+                <goal>site</goal>
+            </goals>
+        </action>
+        <action>
+            <actionName>CUSTOM-Alt 1 cobertura</actionName>
+            <displayName>Alt 1 cobertura</displayName>
+            <goals>
+                <goal>cobertura:cobertura</goal>
+            </goals>
+        </action>
+        <action>
+            <actionName>CUSTOM-clean cobert</actionName>
+            <displayName>clean cobert</displayName>
+            <goals>
+                <goal>cobertura:clean</goal>
+            </goals>
+        </action>
+        <action>
+            <actionName>CUSTOM-cobertura it</actionName>
+            <displayName>cobertura it</displayName>
+            <goals>
+                <goal>cobertura:cobertura-integration-test</goal>
+            </goals>
+        </action>
+        <action>
+            <actionName>CUSTOM-mvn install</actionName>
+            <displayName>mvn install</displayName>
+            <goals>
+                <goal>install</goal>
+            </goals>
+        </action>
     </actions>
