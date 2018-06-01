@@ -27,11 +27,22 @@
     
     <reporting>
         <plugins>
-        <plugin>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-project-info-reports-plugin</artifactId>
-            <version>2.9</version>
-        </plugin>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>cobertura-maven-plugin</artifactId>
+                <version>2.7</version>
+                <configuration>
+                    <formats>
+                        <format>html</format>
+                        <format>xml</format>
+                    </formats>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-project-info-reports-plugin</artifactId>
+                <version>2.9</version>
+            </plugin>
         </plugins>
     </reporting>
     
@@ -44,11 +55,18 @@
                 <configuration>
                     <instrumentation>
                         <excludes>
-                            <exclude>practica11/ejercicio1/HandleStrings.class</exclude>
-                            <exclude>practica11/ejercicio1/HandleStringsTest.class</exclude>
+                            <exclude>ejercicio1/HandleStrings.class</exclude>
+                            <exclude>ejercicio1/HandleStringsTest.class</exclude>
                         </excludes>
                     </instrumentation>   
                 </configuration>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>clean</goal>
+                        </goals>
+                    </execution>
+                </executions>
             </plugin>
         </plugins>
     </build>
